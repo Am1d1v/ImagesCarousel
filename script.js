@@ -8,7 +8,7 @@ let imageIndex = 0;
 
 
 // Next Image every 2 seconds
-let interval = setInterval(run, 2000);
+//let interval = setInterval(run, 2000);
 
 function run(){
     imageIndex++;
@@ -24,3 +24,15 @@ function changeImage(){
 
     container.style.transform = `translateX(${imageIndex * -500}px)`
 }
+
+
+// Buttons for Previous & Next Images
+nextBtn.addEventListener('click', () => {
+    imageIndex++;
+    changeImage();
+});
+
+previousBtn.addEventListener('click', () => {
+    imageIndex--;
+    changeImage();
+});
